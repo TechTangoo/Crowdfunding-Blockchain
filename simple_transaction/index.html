@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crowdfunding Campaign</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f8ff, #c0c0c0);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crowdfunding Campaign</h1>
+    <div class="container">
+        <p>Current Contract Balance: <span id="contractBalance">Loading...</span> ETH</p>
+        <div class="section">
+            <label for="contractGoal">Goal Amount: <span id="contractGoal">3</span> ETH</label>
+        </div>
+        <div class="section">
+            <h2>Contribute to Campaign</h2>
+            <label for="contributionAmount">Contribution Amount (ETH):</label>
+            <input type="number" id="contributionAmount" step="0.01" min="0">
+            <button onclick="contribute()">Contribute</button>
+        </div>
+        <div class="section">
+            <h2>Withdraw Funds</h2>
+            <button onclick="withdrawFunds()">Withdraw Funds</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

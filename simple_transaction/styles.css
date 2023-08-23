@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#app {
+    margin-top: 50px;
+}
+
+input, button {
+    margin: 10px;
+    padding: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#registration-form {
+    display: block;
+}
